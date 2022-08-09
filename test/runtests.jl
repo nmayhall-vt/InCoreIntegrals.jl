@@ -2,5 +2,5 @@ using InCoreIntegrals
 using Test
 
 @testset "InCoreIntegrals.jl" begin
-    # Write your tests here.
+    include("test_01.jl")
 end
