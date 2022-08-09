@@ -1,7 +1,7 @@
 using InCoreIntegrals
 
 """
-orbital_rotation!(ints::InCoreInts, U)
+    orbital_rotation!(ints::InCoreInts, U)
 
 Transform electronic integrals, by U
 i.e.,
@@ -22,7 +22,7 @@ function orbital_rotation!(ints::InCoreInts{T}, U::Matrix{T}) where T
 end
 
 @doc raw"""
-orbital_rotation(ints::InCoreInts, U)
+    orbital_rotation(ints::InCoreInts, U)
 
 Transform electronic integrals, by U
 i.e.,

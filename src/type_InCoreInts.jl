@@ -1,9 +1,9 @@
 using InCoreIntegrals
 
 """
-h0::Real                # constant energy shift
-h1::Array{T,2}          # one electron integrals
-h2::Array{T,4}          # two electron integrals (chemist's notation)
+    -h0::Real                # constant energy shift
+    -h1::Array{T,2}          # one electron integrals
+    -h2::Array{T,4}          # two electron integrals (chemist's notation)
 
 Type to hold a second quantized Hamiltonian coefficients in memory
 """
@@ -21,9 +21,11 @@ end
 
 
 """
-subset(ints::InCoreInts, list; rmd1a=nothing, rdm1b=nothing)
+    subset(ints::InCoreInts, list; rmd1a=nothing, rdm1b=nothing)
 
 Extract a subset of integrals acting on orbitals in list, returned as `InCoreInts` type
+
+# Arguments
 - `ints::InCoreInts`: Integrals for full system 
 - `list`: list of orbital indices in subset
 - `rdm1a`: 1RDM for embedding α density to make CASCI hamiltonian
