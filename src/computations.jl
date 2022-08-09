@@ -23,6 +23,9 @@ end
 Return energy defined by `rdm1` and `rdm2`
 """
 function compute_energy(ints::InCoreInts, rdm1, rdm2)
+    length(rdm1) == length(ints.h1) || throw(DimensionMismatch)
+    length(rdm2) == length(ints.h2) || throw(DimensionMismatch)
+
     e = ints.h0
     e += sum(ints.h1 .* rdm1)
     e += .5*sum(ints.h2 .* rdm2)

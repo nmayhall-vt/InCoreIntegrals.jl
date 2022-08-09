@@ -29,5 +29,21 @@ using Random
     
     @test isapprox(tr(ints.h1), -14.528372393862362)
     @test isapprox(tr(reshape(ints.h2, (norb*norb, norb*norb))), 5.572554617047113)
+    
+    e,U = eigen(ints.h1)
+    orbital_rotation!(ints, U);
 
+    rdm1a = zeros(norb,norb)
+    for i in 1:norb
+        rdm1a[i,i] = 1
+    end
+    rdm1b = rdm1a
+
+    ints_casci = subset(ints, [3,4], rdm1a, rdm1b)
+    @test size(ints_casci.h1,2) == 2
+
+
+    #e = compute_energy(ints, rdm1a+rdm1b, rdm2)
+    #display(e)
+    
 end
