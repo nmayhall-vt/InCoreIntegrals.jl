@@ -5,6 +5,7 @@ version = "0.1.0"
 
 [deps]
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 NPZ = "15e1cf62-19b3-5cfa-8e77-841668bca605"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
@@ -12,6 +13,9 @@ TensorOperations = "6aa20fa7-93e2-5fca-9bc0-fbd0db3c71a2"
 
 [compat]
 NPZ = "0.4"
+TensorOperations = "3"
+Documenter = "0.27"
+JLD2 = "0.4"
 julia = "1.7"
 
 [extras]
