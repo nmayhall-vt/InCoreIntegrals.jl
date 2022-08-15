@@ -37,7 +37,7 @@ function subset(ints::InCoreInts{T}, list, rdm1a=nothing, rdm1b=nothing) where {
             f[p,s] -= .5*viqri[p,q,r,s] * da[q,r]
             f[p,s] -= .5*viqri[p,q,r,s] * db[q,r]
         end
-        ints_i.h1 .= f
+        ints_i.h1 .+= f
     end
     return ints_i
 end

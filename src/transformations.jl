@@ -1,25 +1,25 @@
 using InCoreIntegrals
 
-"""
-    orbital_rotation!(ints::InCoreInts, U)
-
-Transform electronic integrals, by U
-i.e.,
-```math
-h_{pq} = U_{rp}h_{rs}U_{sq}
-```
-```math
-(pq|rs) = (tu|vw)U_{tp}U_{uq}U_{vr}U_{ws}
-```
-"""
-function orbital_rotation!(ints::InCoreInts{T}, U::Matrix{T}) where T
-    ints.h1 .= U' * ints.h1 * U
-    scr = Array{T}(undef, size(ints.h2)...)
-    @tensor begin
-        scr[p,q,r,s] = U[t,p]*U[u,q]*U[v,r]*U[w,s]*ints.h2[t,u,v,w]
-    end
-    ints.h2 .= scr
-end
+#"""
+#    orbital_rotation!(ints::InCoreInts, U)
+#
+#Transform electronic integrals, by U
+#i.e.,
+#```math
+#h_{pq} = U_{rp}h_{rs}U_{sq}
+#```
+#```math
+#(pq|rs) = (tu|vw)U_{tp}U_{uq}U_{vr}U_{ws}
+#```
+#"""
+#function orbital_rotation!(ints::InCoreInts{T}, U::Matrix{T}) where T
+#    ints.h1 .= U' * ints.h1 * U
+#    scr = Array{T}(undef, size(ints.h2)...)
+#    @tensor begin
+#        scr[p,q,r,s] = U[t,p]*U[u,q]*U[v,r]*U[w,s]*ints.h2[t,u,v,w]
+#    end
+#    ints.h2 .= scr
+#end
 
 @doc raw"""
     orbital_rotation(ints::InCoreInts, U)
