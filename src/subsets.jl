@@ -3,7 +3,9 @@ using InCoreIntegrals
 """
     subset(ints::InCoreInts, list; rmd1a=nothing, rdm1b=nothing)
 
-Extract a subset of integrals acting on orbitals in list, returned as `InCoreInts` type
+Extract a subset of integrals acting on orbitals in list, returned as `InCoreInts` type.
+Because a constant is necessarily a global quantity, we return an `InCoreInts` object
+with h0 = 0.0. 
 
 # Arguments
 - `ints::InCoreInts`: Integrals for full system 
@@ -12,7 +14,8 @@ Extract a subset of integrals acting on orbitals in list, returned as `InCoreInt
 - `rdm1b`: 1RDM for embedding β density to make CASCI hamiltonian
 """
 function subset(ints::InCoreInts{T}, list, rdm1a=nothing, rdm1b=nothing) where {T}
-    ints_i = InCoreInts{T}(ints.h0, view(ints.h1,list,list), view(ints.h2,list,list,list,list))
+    ints_i = InCoreInts{T}(0.0, view(ints.h1,list,list), view(ints.h2,list,list,list,list))
+    #ints_i = InCoreInts{T}(ints.h0, view(ints.h1,list,list), view(ints.h2,list,list,list,list))
     if rdm1b != nothing 
         if rdm1a == nothing
             throw(Exception)
