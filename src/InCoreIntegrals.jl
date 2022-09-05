@@ -14,5 +14,6 @@ export InCoreInts
 export orbital_rotation
 export compute_energy
 export subset 
+export n_orb
 
 end

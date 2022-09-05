@@ -25,7 +25,7 @@ using JLD2
     ints = orbital_rotation(ints, U);
     @test isapprox(ints.h1, ints2.h1)
     #display(tr(ints.h1))
-    norb = size(ints.h1,1)
+    norb = n_orb(ints)
     #display(tr(reshape(ints.h2, (norb*norb, norb*norb))))
     
     @test isapprox(tr(ints.h1), -14.528372393862362)
