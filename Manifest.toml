@@ -285,6 +285,14 @@ version = "1.3.0"
 deps = ["Unicode"]
 uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
+[[deps.QCBase]]
+deps = ["Printf", "StaticArrays"]
+git-tree-sha1 = "70e100aa568dd185383b6d1f92ca32ffbbe3a631"
+repo-rev = "main"
+repo-url = "https://github.com/nmayhall-vt/QCBase.jl"
+uuid = "0dbae682-d491-4cbc-9a73-7148926f1b63"
+version = "0.1.0"
+
 [[deps.REPL]]
 deps = ["InteractiveUtils", "Markdown", "Sockets", "Unicode"]
 uuid = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
@@ -338,6 +346,17 @@ deps = ["ChainRulesCore", "IrrationalConstants", "LogExpFunctions", "OpenLibm_jl
 git-tree-sha1 = "d75bda01f8c31ebb72df80a46c88b25d1c79c56d"
 uuid = "276daf66-3868-5448-9aa4-cd146d93841b"
 version = "2.1.7"
+
+[[deps.StaticArrays]]
+deps = ["LinearAlgebra", "Random", "StaticArraysCore", "Statistics"]
+git-tree-sha1 = "efa8acd030667776248eabb054b1836ac81d92f0"
+uuid = "90137ffa-7385-5640-81b9-e52037218182"
+version = "1.5.7"
+
+[[deps.StaticArraysCore]]
+git-tree-sha1 = "ec2bd695e905a3c755b33026954b119ea17f2d22"
+uuid = "1e83bf80-4336-4d27-bf5d-d5a4f845583c"
+version = "1.3.0"
 
 [[deps.Statistics]]
 deps = ["LinearAlgebra", "SparseArrays"]

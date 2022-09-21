@@ -2,6 +2,7 @@ module InCoreIntegrals
 
 # using
 using TensorOperations
+using QCBase
 
 include("type_InCoreInts.jl")
 include("transformations.jl")
@@ -12,8 +13,8 @@ include("subsets.jl")
 export InCoreInts
 #export orbital_rotation!
 export orbital_rotation
-export compute_energy
 export subset 
-export n_orb
+#export compute_energy
+#export n_orb
 
 end
