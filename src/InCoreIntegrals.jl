@@ -11,10 +11,6 @@ include("subsets.jl")
 
 # exports
 export InCoreInts
-#export orbital_rotation!
-export orbital_rotation
 export subset 
-#export compute_energy
-#export n_orb
 
 end
