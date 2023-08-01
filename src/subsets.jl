@@ -1,3 +1,4 @@
+using QCBase
 using InCoreIntegrals
 
 """
@@ -15,6 +16,9 @@ function subset(ints::InCoreInts{T}, list) where {T}
     return InCoreInts{T}(0.0, view(ints.h1,list,list), view(ints.h2,list,list,list,list))
 end
 
+function InCoreIntegrals.subset(ints::InCoreInts, ci::MOCluster)
+    return subset(ints, ci.orb_list) 
+end
 
 
 """

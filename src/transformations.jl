@@ -33,7 +33,7 @@ h_{pq} = U_{rp}h_{rs}U_{sq}
 (pq|rs) = (tu|vw)U_{tp}U_{uq}U_{vr}U_{ws}
 ```
 """
-function orbital_rotation(ints::InCoreInts, U)
+function QCBase.orbital_rotation(ints::InCoreInts, U)
     @tensor begin
         h1[p,q] := U[r,p]*U[s,q]*ints.h1[r,s]
         # h2[p,q,r,s] := U[t,p]*U[u,q]*U[v,r]*U[w,s]*ints.h2[t,u,v,w]
