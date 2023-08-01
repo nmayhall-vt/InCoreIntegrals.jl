@@ -1,3 +1,4 @@
+using QCBase
 using InCoreIntegrals
 using NPZ
 using Test
